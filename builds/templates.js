@@ -114,19 +114,11 @@ __p += '<div class="flyout box-flyout">\n    <div class="dragresize dragresize-t
 ((__t = (info_close)) == null ? '' : __t) +
 '"></a>\n        <a class="chatbox-btn toggle-chatbox-button icon-minus" title="' +
 ((__t = (info_minimize)) == null ? '' : __t) +
-'"></a>\n        <div class="chat-title">\n            ';
- if (url) { ;
-__p += '\n                <a href="' +
-((__t = (url)) == null ? '' : __t) +
-'" target="_blank" class="user">\n            ';
- } ;
-__p += '\n                    ' +
+'"></a>\n        <div class="chat-title">\n                <a href="#/profile/chat/' +
+((__t = (jid)) == null ? '' : __t) +
+'" target="_blank" class="user">\n                    ' +
 ((__t = ( fullname )) == null ? '' : __t) +
-'\n            ';
- if (url) { ;
-__p += '\n                </a>\n            ';
- } ;
-__p += '\n        </div>\n        <p class="user-custom-message"><p/>\n    </div>\n    <div class="chat-body">\n        <div class="chat-content"></div>\n        <form class="sendXMPPMessage" action="" method="post">\n            ';
+'\n                </a>\n        </div>\n        <p class="user-custom-message"><p/>\n    </div>\n    <div class="chat-body">\n        <div class="chat-content"></div>\n        <form class="sendXMPPMessage" action="" method="post">\n            ';
  if (show_toolbar) { ;
 __p += '\n                <ul class="chat-toolbar no-text-select"></ul>\n            ';
  } ;
