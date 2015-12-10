@@ -114,7 +114,7 @@ __p += '<div class="flyout box-flyout">\n    <div class="dragresize dragresize-t
 ((__t = (info_close)) == null ? '' : __t) +
 '"></a>\n        <a class="chatbox-btn toggle-chatbox-button icon-minus" title="' +
 ((__t = (info_minimize)) == null ? '' : __t) +
-'"></a>\n        <div class="chat-title">\n                <a href="#/profile/chat/' +
+'"></a>\n        <div class="chat-title">\n                <a href="#/profiles/chat/' +
 ((__t = (jid)) == null ? '' : __t) +
 '" target="_blank" class="user">\n                    ' +
 ((__t = ( fullname )) == null ? '' : __t) +
