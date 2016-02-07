@@ -245,7 +245,7 @@
                 }
             }
         };
-		
+
         this.detectLocale = function (library_check) {
             /* Determine which locale is supported by the user's system as well
              * as by the relevant library (e.g. converse.js or moment.js).
@@ -273,7 +273,7 @@
             }
             return locale || 'en';
         };
-		
+
         if (!moment.locale) { //moment.lang is deprecated after 2.8.1, use moment.locale instead
             moment.locale = moment.lang;
         }
@@ -491,7 +491,7 @@
             $(window).on('click mousemove keypress focus'+unloadevent , this.onUserActivity.bind(this));
             window.setInterval(this.onEverySecond.bind(this), 1000);
         };
-		
+
         this.playNotification = function () {
             var audio;
             if (converse.play_sounds && typeof Audio !== "undefined") {
@@ -803,7 +803,7 @@
             }
             return false;
         };
-		
+
         this.pong = function (ping) {
             converse.lastStanzaDate = new Date();
             converse.connection.ping.pong(ping);
@@ -889,7 +889,7 @@
             this.enableCarbons();
             this.initStatus(function () {
                 this.registerPingHandler();
-                this.registerIntervalHandler();				
+                this.registerIntervalHandler();
                 this.chatboxes.onConnected();
                 this.giveFeedback(__('Contacts'));
                 if (this.callback) {
@@ -1575,6 +1575,11 @@
                     // are mentioned.
                     extra_classes += ' mentioned';
                 }
+
+                if (text.split('"report_url":"').length > 1) {
+                  text = text.split('report_url":"')[1].replace('"}', '');
+                }
+
                 return $(template({
                         msgid: attrs.msgid,
                         'sender': attrs.sender,
